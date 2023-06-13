@@ -1,0 +1,18 @@
+.List {
+    display: flex;
+    flex-direction: column;
+}
+
+.ListItem {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ListHeading {
+    margin-bottom: 5px;
+}
+
+.MuiCheckbox-root {
+    margin-bottom: 5px;
+}
