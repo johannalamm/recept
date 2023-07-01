@@ -34,21 +34,7 @@ function App() {
   return (
     <div className="App">
         <Grid container spacing={2}>
-          <Grid xs={5} className="List">
-            <div>
-              {Object.keys(categories).map((category) => {
-                return (
-                  <div className="ListItem" key={category}>
-                    <div className="ListHeading">{category}</div>
-                  {Object.keys(shoppningList[category]).map((title) => {
-                    const ingredient = shoppningList[category][title];
-                    return <Checkbox color="neutral" variant="outlined" label={ingredient.value + ' ' + ingredient.unit + ' ' +ingredient.title} key={ingredient.title} />
-                  }
-                )
-              }</div>)})}
-            </div>
-          </Grid>
-          <Grid xs={5}>
+        <Grid xs={12} md={5}>
             <Autocomplete
               id="tags-default"
               multiple
@@ -76,7 +62,7 @@ function App() {
                 ))
               }
             />
-            <List sx={{ maxWidth: 300 }}>
+            <List>
             {addedRecipes?.map((recipe) => 
                             <ListItem
                             key={recipe.title}
@@ -151,6 +137,20 @@ function App() {
               )}
             </List>
           </Grid>
+          <Grid xs={12} md={5} className="List">
+            <div>
+              {Object.keys(categories).map((category) => {
+                return (
+                  <div className="ListItem" key={category}>
+                    <div className="ListHeading">{category}</div>
+                  {Object.keys(shoppningList[category]).map((title) => {
+                    const ingredient = shoppningList[category][title];
+                    return <Checkbox color="neutral" variant="outlined" label={ingredient.value + ' ' + ingredient.unit + ' ' +ingredient.title} key={ingredient.title} />
+                  }
+                )
+              }</div>)})}
+            </div>
+          </Grid>
         </Grid>
         <Modal open={!!recipe} onClose={() => setRecipe(undefined)}>
         <ModalDialog
@@ -163,7 +163,7 @@ function App() {
           {recipe?.title}
           </Typography>
           <Grid container spacing={2}>
-            <Grid xs={5} className="List">
+            <Grid xs={12} md={5} className="List Ingredients">
               {recipe?.ingredients.map((ingredient) => {
                 return (
                   <div className="ListItem" key={ingredient.title}> 
@@ -172,7 +172,7 @@ function App() {
                 );
               })}
             </Grid>
-            <Grid xs={7}>
+            <Grid xs={12} md={7}>
               {recipe?.steps.map((step) => {
                   let modifiedStep = step;
 
@@ -182,7 +182,7 @@ function App() {
                   });
                 return (
                   <div className="ListItem" key={step}> 
-                  {modifiedStep}
+                  • {modifiedStep}
                   </div>
                 );
               })}
