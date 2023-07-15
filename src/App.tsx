@@ -40,7 +40,7 @@ function App() {
               multiple
               options={all_tags}
               getOptionLabel={(option) => option}
-              defaultValue={[all_tags[3], all_tags[4]]}
+              defaultValue={[all_tags[3]]}
               onChange={(_event, newValue) => {
                 let recipesWithTags = [...recipes];
                 newValue.forEach((tag) => {
@@ -145,7 +145,7 @@ function App() {
                     <div className="ListHeading">{category}</div>
                   {Object.keys(shoppningList[category]).map((title) => {
                     const ingredient = shoppningList[category][title];
-                    return <Checkbox color="neutral" variant="outlined" label={ingredient.value + ' ' + ingredient.unit + ' ' +ingredient.title} key={ingredient.title} />
+                    return <Checkbox sx={{ margin: "0 0 10px 0" }} color="neutral" variant="outlined" label={ingredient.value + ' ' + ingredient.unit + ' ' +ingredient.title} key={ingredient.title} />
                   }
                 )
               }</div>)})}

@@ -10,7 +10,8 @@
 }
 
 .ListHeading {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 .MuiCheckbox-root {
