@@ -36,7 +36,7 @@ export const kottfarssas: Recipe = {
         },
         {
             unit: 'burkar',
-            title: 'champinjoner på burk',
+            title: 'champinjoner',
             value: 1,
             category: 'skafferi'
         },
@@ -50,7 +50,7 @@ export const kottfarssas: Recipe = {
     steps: [
         'Koka upp vatten och tillsätt {spaghetti}.',
         'Stek {nötfärs}.',
-        'Häll i {crème fraiche}, {tomatpuré}, {ketchup}, {timjan} och {champinjoner på burk}.',
+        'Häll i {crème fraiche}, {tomatpuré}, {ketchup}, {timjan} och {champinjoner}.',
     ],
     tags: ['snabbt', 'jonathan', 'vardagsmat', 'huvudrätt']
 }

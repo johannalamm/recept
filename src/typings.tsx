@@ -27,9 +27,29 @@ export type IngredientTitle =
 'ketchup' |
 'nötfärs' |
 'timjan' |
-'champinjoner på burk' |
+'champinjoner' |
 'spaghetti' |
-'ris';
+'ris' |
+'kyckling' |
+'dragon' |
+'köttbuljong' |
+'smör' |
+'fusilli' |
+'bacon' |
+'kantarellfond' |
+'soja' |
+'vitlök' |
+'bladspenat' |
+'lasagneplattor' |
+'färska champinjoner' |
+'riven ost' |
+'tomater' |
+'gurka' |
+'småtomater' |
+'päron' |
+'ägg' |
+'tonfisk på burk' |
+'majonnäs';
 
 type IngredientUnitMap = {
     'matlagningsgrädde': 'ml';
@@ -44,8 +64,28 @@ type IngredientUnitMap = {
     'ris': 'dl';
     'nötfärs': 'g';
     'timjan': 'g';
-    'champinjoner på burk': 'burkar';
+    'champinjoner': 'burkar';
     'spaghetti': 'g';
+    'kyckling': 'filéer';
+    'dragon': 'g';
+    'köttbuljong': 'tärningar';
+    'smör': 'g';
+    'fusilli': 'g';
+    'bacon': 'g';
+    'kantarellfond': 'ml';
+    'soja': 'ml';
+    'vitlök': 'klyftor';
+    'bladspenat': 'g';
+    'lasagneplattor': 'g';
+    'färska champinjoner': 'g';
+    'riven ost': 'g';
+    'tomater': 'st';
+    'gurka': 'st';
+    'småtomater': 'g';
+    'päron': 'st';
+    'ägg': 'st';
+    'tonfisk på burk': 'g';
+    'majonnäs': 'ml';
 };
 
 type IngredientCategoryMap = {
@@ -61,11 +101,31 @@ type IngredientCategoryMap = {
     'ris': 'skafferi';
     'nötfärs': 'kött, fågel & chark';
     'timjan': 'kryddor & smaksättare';
-    'champinjoner på burk': 'skafferi';
+    'champinjoner': 'skafferi';
     'spaghetti': 'skafferi';
+    'kyckling': 'kött, fågel & chark';
+    'dragon': 'kryddor & smaksättare';
+    'köttbuljong': 'kryddor & smaksättare';
+    'smör': 'mejeri';
+    'fusilli': 'skafferi';
+    'bacon': 'kött, fågel & chark';
+    'kantarellfond': 'kryddor & smaksättare';
+    'soja': 'kryddor & smaksättare';
+    'vitlök': 'frukt & grönt';
+    'bladspenat': 'frukt & grönt';
+    'lasagneplattor': 'skafferi';
+    'färska champinjoner': 'frukt & grönt';
+    'riven ost': 'mejeri';
+    'tomater': 'frukt & grönt';
+    'gurka': 'frukt & grönt';
+    'småtomater': 'frukt & grönt';
+    'päron': 'frukt & grönt';
+    'ägg': 'mejeri';
+    'tonfisk på burk': 'skafferi';
+    'majonnäs': 'skafferi';
   };
 
 export type Category = 'mejeri' | 'frysdisken' | 'frukt & grönt' | 'kryddor & smaksättare' | 'kött, fågel & chark' | 'skafferi' | 'skip';
 
-export type Tag = 'vegetariskt' | 'snabbt' | 'jonathan' | 'johanna' | 'vardagsmat' | 'huvudrätt';
+export type Tag = 'vegetariskt' | 'snabbt' | 'jonathan' | 'johanna' | 'vardagsmat' | 'huvudrätt' | 'fisk' ;
 
